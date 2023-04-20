@@ -40,7 +40,7 @@ function onImgClick(e) {
   `);
   instance.show();
 
-  window.addEventListener("keydown", (e) => {
+  document.addEventListener("keydown", (e) => {
     if (e.code === "Escape") {
       instance.close();
     }
