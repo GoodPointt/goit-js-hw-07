@@ -24,21 +24,7 @@ function createGalleryMarkup(galleryItems) {
     .join("");
 }
 
-ulRef.addEventListener("click", onImgClick);
-
-function onImgClick(e) {
-  e.preventDefault();
-
-  if (e.target.nodeName !== "IMG") {
-    return;
-  }
-  let gallery = new SimpleLightbox(".gallery__link", {
-    captionsData: "alt",
-    captionDelay: "250",
-  });
-  gallery.on("show.simplelightbox", function () {
-    // do something…
-  });
-
-  window.addEventListener("keydown", (e) => {});
-}
+let gallery = new SimpleLightbox(".gallery__link", {
+  captionsData: "alt",
+  captionDelay: "250",
+});
